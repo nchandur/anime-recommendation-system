@@ -13,7 +13,7 @@ rows = []
 with open("data/errors.csv", "w") as error:
     error.write("url, error\n")
 
-    for link in tqdm(links):
+    for link in tqdm(links[:]):
         
         try:
 

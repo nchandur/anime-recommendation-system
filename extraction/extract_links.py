@@ -20,10 +20,10 @@ def extract_links(topK:int=0) -> list[str]:
 
 all_links = []
 
-for i in tqdm(range(0, 2000, 50)):
+for i in tqdm(range(0, 3000, 50)):
     links = extract_links(topK=i)
     all_links += links
-    sleep(randint(10, 20))
+    sleep(randint(3, 7))
 
 with open("data/links.txt", "w") as file:
     for link in all_links:
